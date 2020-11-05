@@ -1,0 +1,38 @@
+<div *ngIf="event">
+  <h2>Event Details</h2>
+  <div class="card">
+    <h3>{{event.name | titlecase}}</h3>
+    <div class="card-body input-group mb-3">
+      <div>
+        <div>
+          <span>ID: </span>{{event.id}}
+        </div>
+      </div>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+      <span class="input-group-text">Description:
+      </span>
+        </div>
+        <input [(ngModel)]="event.description" class="form-control" placeholder="Description"/>
+      </div>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+      <span class="input-group-text">Start Date:
+      </span>
+        </div>
+        <input [(ngModel)]="event.start" class="form-control" type="date"/>
+      </div>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+      <span class="input-group-text">End Date:
+      </span>
+        </div>
+        <input [(ngModel)]="event.end" class="form-control" type="date"/>
+      </div>
+      <div><span>Creator Name: </span>{{event.creator.username}}</div>
+      <div>&nbsp;|&nbsp;<span>Creator Id: </span>{{event.creator.id | number}}</div>
+    </div>
+    <span>
+    <button class="btn btn-secondary fix-size" (click)="goBack()">go back</button></span>
+  </div>
+</div>

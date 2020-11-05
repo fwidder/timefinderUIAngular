@@ -1,0 +1,18 @@
+<h2>User Details</h2>
+<div class="card">
+<h3>{{user.username | titlecase}}</h3>
+<div class="card-body input-group mb-3">
+  <div>
+    <div>
+      <span>ID: </span>{{user.id}}
+    </div>
+  </div>
+  <div class="input-group flex-nowrap">
+    <div class="input-group-prepend">
+    <span class="input-group-text">E-Mail:
+    </span>
+    </div>
+    <input [(ngModel)]="user.email" class="form-control" placeholder="E-Mail"/>
+  </div>
+</div>
+</div>

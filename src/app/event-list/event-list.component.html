@@ -1,0 +1,7 @@
+<h2>Event List</h2>
+<ul class="list-group">
+  <li *ngFor="let event of events" [class.active]="event === selectedEvent" class="list-group-item"
+      routerLink="/event/{{event.id}}">
+    {{event.id | number}} - {{event.name}}
+  </li>
+</ul>
